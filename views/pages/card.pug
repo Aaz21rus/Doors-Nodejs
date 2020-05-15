@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Двери тут
+    link(rel="stylesheet", href="css/cardGoods.css")
+  body.page-cardGoods
+
+    include ../modules/header
+
+    main.card
+      .container
+
+        include ../modules/filter
+
+        section.main-section
+          .index
+            a(href="#").index-text Главная
+            .index-text >
+            a(href="#").index-text Межкомнатные двери
+            .index-text >
+            a(href="#").index-text Шпон файн-лайн
+            .index-text >
+            a(href="#").index-text Шпон Евро
+            .index-text >
+            a(href="#").index-text.choose Евро-41
+
+          h2.headling2 Дверь межкомнатная шпонированная «Евро-41» БелДуб (Шпон файн-лайн) остекление Сатинато белое
+            |
+            span.vendor-code Артикул: 004-01071
+
+          .card
+            img(src="img/img/d2.jpeg", alt="img").card-img
+            .description
+              .priceDoor
+                .doorsAmount
+                  .amount
+                    .amount-text
+                      .choose-number Выберите количество дверей
+                        |
+                        span.star *
+                      .discount Цена уменьшается пропорционально количеству
+                    ul.list-number
+                      for i in ["1", "2", "3", "4", "5"]
+                        li.number-btn
+                          button.num=i
+                  .in-stock
+                    .in-stock-text В наличии
+                .doorsSet
+                  .priceForDoors
+                    .door-leaf
+                      .oldPrice 6 525 руб.
+                      .newPrice.hotDiscount 5 500 руб.
+                      .priceMeasure.hotDiscount Цена за полотно
+                    .door-set
+                      .oldPrice 9 525 руб.
+                      .newPrice 7 252 руб.
+                      .priceMeasure Цена за комплект
+                    .setDetails
+                      span.setTitle Цена за комлект
+                      br
+                      | Комплект состоит из коробки, полотна и наличников с двух сторон.
+                  .buy
+                    .btnContainer
+                      button.sentBasket В корзину
+                      button.sentBasket Купить в 1 клик
+
+              .size
+                .chooseSize
+                  ul.listSize
+                    li.itemTitle Размеры
+                    for i in ["200*60", "200*70", "200*80", "200*90"]
+                      li.itemSize=i
+                  ul.listColor
+                    li.itemTitle Цвет
+                    for e in ["#603900", "#a0a0a0", "#ae8c64", "#f6ead7"]
+                      li.itemColor
+                        .showColor(style={'background-color': e})
+                p.specification
+                  span.specification-title Бесплатный замер
+                  br
+                  | Закажите эту дверь с установкой и мы сделаем бесплатный замер проемов!
+
+              .characteristics
+                .char-btn
+                  button.char-button.but Характеристики
+                  button.char-button.but Комплектация
+                .char-text
+                  ul.text-list
+                    for i in [{left:"Фабрика:", right:"СИБИРЬ-ПРОФИЛЬ (Двери ПВХ)"},{left:"Материал:", right:"брус хвойных пород, МДФ"},{left:"Отделка:", right:"файн-лайн шпон, полиуретановый лак Renner (Италия)"},{left:"Стекло:", right:"Сатинато белое"},{left:"Толщина (мм):", right:"40"},{left:"Кол-во в упаковке (шт):", right:"30"}]
+                      li.item-text
+                        p.left=i.left
+                        p.right=i.right
+
+              .service
+                P.shipping Доставка от 650 до 1250 рублей в пределах МКАД. Возим и в Подмосковье!
+                  br
+                  a(href="#").details Подробнее...
+                P.shipping.install Установка межкомнатных дверей с гарантией — от 1800 рублей.
+                  a(href="#").details Подробнее...
+
+          h3.headling3.hardware-doors Фурнитура для этой двери
+
+          .hardware
+            ul.hardware-phono
+              for i in [{img:"img/img/handle1.png", text:"Ручки раздельные"}, {img:"img/img/handle1.png", text:"Ручки раздельные"}, {img:"img/img/handle1.png", text:"Ручки раздельные"}, {img:"img/img/handle1.png", text:"Ручки раздельные"}, {img:"img/img/handle1.png", text:"Ручки раздельные"}, {img:"img/img/handle1.png", text:"Ручки раздельные"}]
+                li.hardware-handle
+                  a(href="#")
+                    img(src=i.img, alt="img").handle-img
+                    p.handle-name=i.text
+            .video
+              <iframe width="778" height="520" src="https://www.youtube.com/embed/ZMbtwFQjiq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          h3.headling3.offer Другие предложения из раздела «Евро»
+
+          ul.goods-list
+            button.arrow.offer-btn
+             .left
+            for i in ["","","","","","",""]
+              li.item
+                img(src="img/img/d1.jpeg", alt="img").goods-img
+                p.goods-name Евро-40
+                p.goods-color Белый дуб
+                p.old-price 5 783 руб
+                p.new-price 4 300 руб
+                button.in-basket В корзину
+            button.arrow.offer-btn
+              .left.right
+
+          h3.headling3.recent Другие предложения из раздела «Евро»
+
+          ul.goods-list
+            button.arrow.offer-btn
+              .left
+            for i in ["","","","","","",""]
+              li.item
+                img(src="img/img/d1.jpeg", alt="img").goods-img
+                p.goods-name Евро-40
+                p.goods-color Белый дуб
+                p.old-price 5 783 руб
+                p.new-price 4 300 руб
+                button.in-basket В корзину
+            button.arrow.offer-btn
+              .left.right
+
+    include ../modules/footer
+
+
+
+
+

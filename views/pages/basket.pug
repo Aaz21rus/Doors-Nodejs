@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Двери тут
+    link(rel="stylesheet", href="css/basketGoods.css")
+  body.page-basket
+
+    include ../modules/header
+
+    main.main
+      .container
+
+        include ../modules/filter
+
+        section.main-section
+          .index
+            a(href="#").index-text Главная
+            .index-text >
+            a(href="#").index-text.choose Корзина
+
+          .headling2 О нашей компании
+
+          table.basket-container
+            tr.head
+              th.head-text.photo фото
+              th.head-text.name наименование
+              th.head-text.money цена
+              th.head-text.number количество
+              th.head-text.sum сумма
+              th.head-text.edit редактировать
+            tr.body
+              td(rowspan=2).body-photo
+                img(src="img/img/d1.jpeg", alt="").photo
+              td(rowspan=2).body-name
+                p.name Дверь межкомнатная шпонированная «Париж» Виски (Шпон натуральный) остекление художественное
+                p.descp Цвет: Виски, Тип: Полотно
+              td.body-money.money 9 300 руб.
+              td.body-number
+                input(type="text", name="number", placeholder="4").number
+              td.body-sum.sum 9 300 руб.
+              td.body-edit
+                button.close
+            tr
+              td(colspan=4).body.body-instruction
+                  p.instruction-text выберите количество дверей
+                    |
+                    span.star *
+                  p.instruction-smalltext Цена уменьшается прапорционально количеству
+
+          .total
+            .sum
+              p.text Итого:
+              p.sum-num 9 300 руб.
+              p.old-num 12 600 руб.
+            .save
+              p.discount Экономия:
+              p.discount-num 3 300 руб.
+
+          form.form
+            h2.headlings2 Оформить заказ
+            .container-block1
+              .input-block
+                .input-container
+                  label(for="name").label-name Фамилия, Имя *
+                  input(type="text", name="name", placeholder="Введите Имя").input-name
+                  //- include ../modules/form-input.pug
+                .input-container
+                  label(for="name").label-name телефон *
+                  input(type="text", name="name", placeholder="Введите телефон").input-name
+                .input-container
+                  label(for="name").label-name Email *
+                  input(type="text", name="name", placeholder="Введите email").input-name
+                .input-container
+                  label(for="pay").label-name Способ оплаты
+                  select(name="pay").feature
+                    option(value="Оплата наличными при получении").feature-option Оплата наличными при получении
+              .text-block
+                .text-container
+                  textarea(name="comments", placeholder="Комментарий к заказу").textarea-comments
+                .select-block
+                  label(for="pay").label-name Способ доставки
+                  select(name="pay").feature
+                    option(value="Оплата наличными при получении").feature-option Самовывоз (Бесплатно)
+            .container-block2
+              .label-name Адрес
+              input(type="text", placeholder="Город").input-name.long
+              input(type="text", placeholder="Улица").input-name.long
+              input(type="text", placeholder="Корпус").input-name.small
+              input(type="text", placeholder="Город").input-name.small
+              input(type="text", placeholder="Квартира").input-name.small
+            .container-block3
+              .label-name Нужен монтаж
+              select(name="instal").feature
+                option(value="Да").feature-option Да
+            .container-block4
+              .agree
+                label(for="check").checkbox
+                  input(type="checkbox", id="check").agree-v
+                  .new-v
+                p.agree-text Нажимая кнопку «Оформить заказ» вы даете
+                  br
+                  | согласие
+                  |
+                  span.personal на обработку персональных данных
+              button.form-btn.btn-size Оформить заказ
+
+    include ../modules/footer
