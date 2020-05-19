@@ -4,15 +4,15 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Двери тут
-    link(rel="stylesheet", href="css/basketGoods.css")
+    link(rel="stylesheet", href="css/style.css")
   body.page-basket
 
-    include ../modules/header
+    include ./modules/header
 
     main.main
       .container
 
-        include ../modules/filter
+        include ./modules/filter
 
         section.main-section
           .index
@@ -65,7 +65,7 @@ html(lang="ru")
                 .input-container
                   label(for="name").label-name Фамилия, Имя *
                   input(type="text", name="name", placeholder="Введите Имя").input-name
-                  //- include ../modules/form-input.pug
+                  //- include ./modules/form-input.pug
                 .input-container
                   label(for="name").label-name телефон *
                   input(type="text", name="name", placeholder="Введите телефон").input-name
@@ -106,4 +106,4 @@ html(lang="ru")
                   span.personal на обработку персональных данных
               button.form-btn.btn-size Оформить заказ
 
-    include ../modules/footer
+    include ./modules/footer

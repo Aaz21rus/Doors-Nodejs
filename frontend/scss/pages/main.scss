@@ -1,0 +1,106 @@
+.page-main {
+  position: relative;
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+
+    .main-section {
+      width: 80.19%;
+      margin-bottom: 40px;
+      .slider {
+        height: 442px;
+        background-image: url(../img/img/slide-desktop-1.jpeg);
+        background-position-x: -108px;
+        margin-bottom: 50px;
+        position: relative;
+        .new-year {
+          width: 476px;
+          height: 398px;
+          opacity: 0.25;
+        }
+        .slider-news {
+          position: absolute;
+          top: 120px;
+          left: 285px;
+          >.headling1 {
+            margin-bottom: 24px;
+          }
+          .text {
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 30px;
+            margin-bottom: 31px;
+          }
+        }
+      }
+      .slider-btn {
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+        .item:not(:last-child) {
+          margin-right: 23px;
+        }
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .doors-kind {
+          width: 49.77%;
+          &:nth-child(2n) {
+            margin-right: 0;
+            width:36.2%;
+            .models {
+              justify-content: flex-start;
+              .model-item {
+                width: calc(100%/3);
+              }
+            }
+          }
+          >.headling2 {
+            margin-bottom: 26px;
+          }
+          .models {
+            display: flex;
+            margin-bottom: 36px;
+            justify-content: space-between;
+            .model-item {
+              width: calc(100%/4);
+              height: 325px;
+              text-align: center;
+              }
+              .m-img {
+                height: 240px;
+                margin-bottom: 19px;
+              }
+              .m-title {
+                text-align: center;
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 500;
+                margin-bottom: 14px;
+              }
+              .m-count {
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 300;
+              }
+          }
+          .m-link {
+            margin-bottom: 72px;
+            .doorLink {
+              display: inline-block;
+              margin-right: 6px;
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 500;
+              color: #ec7919;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

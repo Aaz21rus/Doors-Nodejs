@@ -10,7 +10,10 @@ html(lang="en")
     div.container
       h1 Add new product
 
-      form(action="/api/product/add" method="POST")
+      form.upload-product
+        div.alert.alert-danger(style="display:none") You must fill all required fields
+        div.alert.alert-success(style="display:none") Success
+
         div.form-group
           label Title
           input.form-control(type="text" name="title")
@@ -51,6 +54,10 @@ html(lang="en")
           label Count In Package
           input.form-control(type="number" name="countInPackage")
 
+        div.form-group
+          label Select good image
+          input.form-control-file.input-product-image(type="file")
+
         button.btn.btn-primary Create product
 
 
@@ -58,3 +65,4 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")
+    script(src="/js/admin.js")

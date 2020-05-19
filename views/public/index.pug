@@ -17,6 +17,7 @@
 - var linkbathSauna7 = ['Двери из массива', 'Стеклянные двери', 'Двери из сосны', 'Двери из липы']
 - var linkHardware8 = ['Ручки раздельные', 'Петли', 'Замки в комплекте', 'Финская фурнитура', 'Замки и защелки', 'Ригели', 'Фурнитура для стеклянных дверей', 'Накладки и фиксаторы',	'Ручки-защелки', 'Фурнитура для дверей купе', 'Упоры и пороги', 'Доводчики', 'Звонки', 'Электронные глазки', 'Прочее']
 - var link = [linkinterio1, linkentranceDoors2, linkslidingDoors3, linkwarehouseDoors4, linkarchesPortals5, linkfireFighting6, linkbathSauna7,linkHardware8]
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -25,12 +26,11 @@ html(lang="ru")
     title Двери тут
     link(rel="stylesheet", href="css/style.css")
   body.page-main
-    include ../modules/header
+    include ./modules/header
 
     main.main
       .container
-
-        include ../modules/filter
+        include ./modules/filter
 
         section.main-section
           .slider
@@ -56,8 +56,8 @@ html(lang="ru")
                 .m-link
                   each b in link[num]
                     a(href="#").doorLink=b
-                    
-    include ../modules/footer
+
+    include ./modules/footer
 
 
 

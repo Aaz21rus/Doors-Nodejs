@@ -4,15 +4,15 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Двери тут
-    link(rel="stylesheet", href="css/cardGoods.css")
+    link(rel="stylesheet", href="css/style.css")
   body.page-cardGoods
 
-    include ../modules/header
+    include ./modules/header
 
     main.card
       .container
 
-        include ../modules/filter
+        include ./modules/filter
 
         section.main-section
           .index
@@ -144,9 +144,4 @@ html(lang="ru")
             button.arrow.offer-btn
               .left.right
 
-    include ../modules/footer
-
-
-
-
-
+    include ./modules/footer
