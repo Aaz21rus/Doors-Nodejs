@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Двери тут
+    link(rel="stylesheet", href="css/style.css")
+  body.page-cardGoods
+
+    include ./modules/header
+
+    main.card
+      form(method="POST" action="/login")
+        div
+          input.phone-name(type="email" name="email" placeholder="Email")
+
+        div
+          input.phone-number(type="password" name="password" placeholder="Пароль")
+
+        div
+          button.reg(type="submit") Войти
+
+    include ./modules/footer
