@@ -5,19 +5,20 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Двери тут
     link(rel="stylesheet", href="css/style.css")
-  body.page-cardGoods
 
+  body.page-login
     include ./modules/header
 
     main.card
-      form(method="POST" action="/login")
-        div
-          input.phone-name(type="email" name="email" placeholder="Email")
+      div.container
+        form(method="POST" action="/login")
+          div
+            input.input.input-email(type="email" name="email" placeholder="Email" value="a@b.ru")
 
-        div
-          input.phone-number(type="password" name="password" placeholder="Пароль")
+          div
+            input.input.input-password(type="password" name="password" placeholder="Пароль" value="123")
 
-        div
-          button.reg(type="submit") Войти
+          div
+            button.btn.btn-reg(type="submit") Войти
 
     include ./modules/footer

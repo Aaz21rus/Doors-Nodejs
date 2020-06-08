@@ -1,5 +1,4 @@
 header.header
-
   include ../modules/modular-window
 
   .container
@@ -15,6 +14,13 @@ header.header
         br
         | на сумму
         span.good-price 1 050 руб.
+
+      if isLogged
+        a(href='/admin') В админку
+        a(href='/logout') Выйти
+      else
+        a(href='/login') Войти
+
   .menu-bar
     .container
       a(href="catalog")
