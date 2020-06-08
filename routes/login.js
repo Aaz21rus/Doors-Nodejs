@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 
+const bcrypt = require('bcrypt')
+const saltRounds = 10
+
 router.get('/login', (req, res) => {
   if (!req.session.email) {
     res.render('public/login')
@@ -11,7 +14,7 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  User.findOne({ email: req.body.email }, (err, user) => {
+  User.findOne({ email: req.body.email }, async (err, user) => {
     if (err) throw err
 
     if (!user) return res.redirect('/login')
@@ -19,7 +22,9 @@ router.post('/login', (req, res) => {
     if (!req.session) {
       res.redirect('/login')
     } else {
-      if (user.password === req.body.password) {
+      const isValid = await bcrypt.compare(req.body.password, user.password)
+
+      if (isValid) {
         req.session.email = req.body.email
         res.redirect('/admin')
       } else {
